@@ -1,0 +1,131 @@
+.mainBody{
+	background-image: url("../images/background.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 640px;
+}
+.TrainStatus{
+  margin-top: 20%;
+  padding-bottom: 2px;
+}
+.PnrStatus{
+	margin-top: 20%;
+}
+.findTrains{
+	margin-top:20%;
+	background: #ecf0f1;
+	padding:10px;
+} 
+.pnr-normal-text{
+	font-size: 14px;
+color: #717171;
+}
+.pnr-bold-text{
+	font-weight: 600;
+font-size: 15px;
+color: #404040;
+text-transform: uppercase
+}
+.pnrDetails{
+	background-color: #fff;
+	margin:4%;
+	padding:10px;
+}
+.pnr-blue-text{
+	color:#48a4ec !important;
+	font-weight: 600;
+	font-size: 16px;
+}
+.search-result-title{
+	margin:10px auto;
+}
+.info{
+	margin:20px auto;
+}
+.chart-status{
+	background: #DFF1FE
+}
+/*.mainContent{
+	background: url("https://images.unsplash.com/photo-1553453005-95bc8e69751e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity:0.6;
+	margin-top: 60px;
+}*/
+.stationTable{
+	background: #fff;
+
+}
+.offersCard{
+	margin:40px;
+	float: left;
+}
+@media only screen and (max-width: 600px) {
+ .playstoreIcon{
+ 	height: 30px;
+ 	width: 80px;
+ }
+}
+.offersZone p{
+	font-weight: 100;
+	margin:10px 0px;
+}
+
+.train-list-info{
+	background-color: #fff;
+	margin:10px 10px;
+	padding:10px;
+	border-radius: 20px;
+}
+.train-count{
+	background: black;
+
+color: white;
+
+border-radius: 20px;
+
+margin: 0 10px;
+}
+.train-list-container{
+	margin-top: 70px;
+}
+.trainBtwStation{
+	background: white;
+margin: 20px;
+padding: 20px;
+}
+.cta-blue{
+	    position: relative;
+    font-size: 12px;
+    border-radius: 2em;
+    color: #2196F3;
+    padding: 5px 18px;
+    border: 1.5px solid #2196F3;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 36px;
+    height: 36px;
+    max-width: 25%;
+    background: #FFFFFF;
+}
+}
+.searchBar input{
+	background: #2196F3;
+color: black;
+border-radius: 10px;
+border-style: none;
+padding: 10px;
+font-weight: 600;
+
+}
+.searchBar{
+	background-color: white;
+
+padding: 20px;
+
+margin: 20px;
+
+border-radius: 10px;
+}
