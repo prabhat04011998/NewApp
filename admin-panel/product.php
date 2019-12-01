@@ -1,10 +1,7 @@
 <?php 
  include("includes/config.php");
 
-   $subcategoryquery="SELECT * FROM sub_category" ;
-   $subcategoryquery=mysqli_query($db,$subcategoryquery);
 
-   $subcategoryrow = mysqli_fetch_array($subcategoryquery,MYSQLI_ASSOC);
 
       
   $date=date('Y-m-d');
@@ -33,7 +30,7 @@
     
     
 
-    $insertquery="INSERT INTO Products( category_id, name,image1, validity_date, coupon_code,  description, discount_percentage) VALUES ('$categ','$productName','$image1','$validity_date','$coupon_code','$description','$discount_percentage')";
+    $insertquery="INSERT INTO Offers( category_id, name,image1, validity_date, coupon_code,  description, discount_percentage) VALUES ('$categ','$productName','$image1','$validity_date','$coupon_code','$description','$discount_percentage')";
       if($insertquery){ 
         mysqli_query($db,$insertquery);
         print_r("<h2>SuccessFully Saved</h2>");//print_r is like echo.

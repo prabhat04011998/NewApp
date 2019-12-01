@@ -38,8 +38,27 @@
 			</div>
 		</div>
 	</div>
+	<div class="liveTrainStatus">
+		<div class="TrainStatus" style="margin-top: 10px;">
+		<div class="content">
+		<h1 class="w3-margin w3-Large w3-bold text-center" style="font-family: initial;">Live Train Status</h1>
+		<form method="post" action="liveStatus.php" >
+			<div style="margin:0% auto;width:50%;margin-bottom:4%;" id="searchBox">
+			<div class="input-group" style="border: 1px solid #2196F3;height: auto">
+			    <input type="text" class="form-control search_field" placeholder="Search....." style="border-radius:0px;" name="liveStatus" required>
+			    <input type="submit" name="submit" class="btn btn-secondary" style="border-radius: 0px;border:0px;border-left:1px solid #2196F3;color:#2196F3;background-color:#fff" value="GET LIVE STATUS">
+			</div>
+		</form>
+		</div>
+		<div class="route">
+			<div class="status-message"></div>
+			<div class="route-cards"></div>
+			
+		</div>
+	</div>
+	</div>	
 	<div class="trainBtwStation">
-		<h2 style="font-weight: 400;font-style: initial;margin-bottom: 20px;">TRAINS BETWEEEN STATION</h2>
+		<h2 style="font-weight: 600;margin-bottom: 20px;text-align: center;font-size:34px;">TRAINS BETWEEEN STATION</h2>
 		<form method="post" action="findTrains.php">
 		<div class="row">
 			<div class="col-md-4">
@@ -66,6 +85,21 @@
 		<input type="submit" class="cta-blue" name="submit" value="Submit">
 		</form>
 	</div>
+
+	<div class="timeTable"> 
+			<div class="timeTablecontent">
+		<h1 class="w3-margin w3-Large w3-bold text-center">TRAIN TIME TABLE</h1>
+		<form method="post" action="timeTable.php">
+			<div style="margin:0% auto;width:50%;margin-bottom:4%;" id="searchBox">
+			<div class="input-group" style="border: 1px solid #2196F3;height: auto">
+			    <input type="text" class="form-control search_field" style="border-radius:0px;" placeholder="Search....." name="timeTable" required>
+			    <input type="submit" name="submit" class="btn btn-secondary" style="border-radius: 0px;border:0px;border-left:1px solid #2196F3;color:#2196F3;background-color:#fff" value="GET TIME TABLE">
+			</div>
+		</form>
+	</div>
+		
+	</div>
+
 
 	<?php include './includes/footer.php'?>
 	

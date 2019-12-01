@@ -2,7 +2,7 @@
 include('includes/config.php');
 // Check connection
 
-$result = mysqli_query($db,"SELECT * FROM Products");
+$result = mysqli_query($db,"SELECT * FROM Offers");
 ?>
 
 <!DOCTYPE html>

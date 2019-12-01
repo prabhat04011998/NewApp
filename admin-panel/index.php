@@ -1,15 +1,12 @@
 
 <?php
-    include('includes/config.php');
+    
     include('session.php');
-    $Psql = "SELECT * FROM Products ";
-    $Dsql = "SELECT * FROM design";
-    $Csql = "SELECT * FROM category";
-    $Ssql = "SELECT * FROM sub_category";
+    $Psql = "SELECT * FROM Offers ";
+    $countQuery="SELECT * FROM views WHERE id=1";
+
+    $countResult=mysqli_fetch_assoc(mysqli_query($db,$countQuery));
     $productCount     = mysqli_num_rows(mysqli_query($db,$Psql));
-    $designCount      = mysqli_num_rows(mysqli_query($db,$Dsql));
-    $categoryCount    = mysqli_num_rows(mysqli_query($db,$Csql));
-    $subcategoryCount = mysqli_num_rows(mysqli_query($db,$Ssql));
 
 
 ?>
@@ -71,22 +68,22 @@
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
-                                            <i class="fa fa-shopping-bag fa-5x"></i>
+                                            <i class="fa fa-train fa-5x"></i>
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge"><?php echo($categoryCount) ?></div>
-                                            <div>Total Categories!</div>
+                                            <div class="huge"><?php echo($countResult['live-status']) ?></div>
+                                            <div>TOTAL LIVE-STATUS VISITS!</div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="categories.php">
+                                <!-- <a href="#">
                                     <div class="panel-footer">
                                         <span class="pull-left">View Details</span>
                                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
                                         <div class="clearfix"></div>
                                     </div>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -94,22 +91,22 @@
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
-                                            <i class="fa fa-shopping-cart fa-5x"></i>
+                                            <i class="fa fa-eye fa-5x"></i>
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge"><?php echo($subcategoryCount) ?></div>
-                                            <div>Total Sub-Categories!</div>
+                                            <div class="huge"><?php echo($countResult['premium-count']."+".$countResult['garibrath-count']."+".$countResult['rajdhani-count']) ?></div>
+                                            <div>Premium + Garibrath + Rajdhani!</div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="showsubcategory.php">
+                                <!-- <a href="#">
                                     <div class="panel-footer">
                                         <span class="pull-left">View Details</span>
                                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
                                         <div class="clearfix"></div>
                                     </div>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -121,7 +118,7 @@
                                         </div>
                                         <div class="col-xs-9 text-right">
                                             <div class="huge"><?php echo($productCount)?></div>
-                                            <div>Total Offers!</div>
+                                            <div>TOTAL OFFERS!</div>
                                         </div>
                                     </div>
                                 </div>
@@ -138,24 +135,15 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="panel panel-red">
                                 <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-xs-3">
-                                            <i class="fa fa-support fa-5x"></i>
-                                        </div>
-                                        <div class="col-xs-9 text-right">
-                                            <div class="huge"><?php echo($designCount) ?></div>
-                                            <div>Total Designs!</div>
-                                        </div>
+                                    
+                                            <div class="huge"><?php echo($countResult['pnr']."+".$countResult['find-train']."+".$countResult['time-table']) ?></div>
+                                            <div>PNR + FIND-TRAIN + TIME-TABLE!</div>
+                                        
+                                        
                                     </div>
                                 </div>
-                                <a href="showdesign.php">
-                                    <div class="panel-footer">
-                                        <span class="pull-left">View Details</span>
-                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
